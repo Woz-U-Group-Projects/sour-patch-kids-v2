@@ -8,7 +8,7 @@ import { Task } from "../models/task";
   styleUrls: ["./task-display.component.css"]
 })
 export class TaskDisplayComponent implements OnInit {
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService) { }
   newTask: Task = new Task();
   tasks: Task[] = [];
 
@@ -21,6 +21,11 @@ export class TaskDisplayComponent implements OnInit {
       this.getTasks();
       this.newTask = new Task();
     });
+  }
+
+  deleteTask(id): void {
+    this.taskService.deleteTask(id).subscribe(t =>
+      this.getTasks());
   }
 
   ngOnInit() {

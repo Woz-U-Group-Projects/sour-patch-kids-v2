@@ -16,7 +16,7 @@ export class TaskService {
   // Express will use port 3000
   apiUrl: string = "http://localhost:3001/tasks";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(this.apiUrl);
@@ -24,5 +24,9 @@ export class TaskService {
 
   addTask(task): Observable<Task> {
     return this.http.post<Task>(this.apiUrl, task);
+  }
+
+  deleteTask(id: string): Observable<Task> {
+    return this.http.delete<Task>(this.apiUrl + "/" + id);
   }
 }
