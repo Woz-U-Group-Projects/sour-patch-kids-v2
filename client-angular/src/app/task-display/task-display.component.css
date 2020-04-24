@@ -1,0 +1,43 @@
+.wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+    
+}
+
+.task-form{
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.13);
+    color: #fa9ec5;
+}
+
+h3{
+    color: #fa9ec5;
+}
+
+ul{
+    color: #fa9ec5; 
+}
+
+button{
+    color: #fa9ec5; 
+}
+li{
+    color: #fa9ec5; 
+}
+
+.addlist{
+  padding-left: 150px;
+}
+
+.list{
+    padding-left: 100px;
+}
+
